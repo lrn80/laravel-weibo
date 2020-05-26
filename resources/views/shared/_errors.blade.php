@@ -6,7 +6,5 @@
         </ul>
     </div>
 @endif
-@if(count($errors) > 0)
-    {{ count($errors) }}
-@endif
+
 
