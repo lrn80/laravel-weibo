@@ -18,7 +18,11 @@ class UsersController extends Controller
             'only' => ['create']
         ]);
     }
-
+    public function index()
+    {
+        $users = User::paginate(10);
+        return view('users.index', compact('users'));
+    }
     //
     public function create()
     {
