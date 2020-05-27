@@ -38,6 +38,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function statuses()
+    {
+        $this->hasMany(Status::class);
+    }
+
     public function gravatar($size = '100')
     {
         $hash = md5(strtolower(trim($this->attributes['email'])));
