@@ -9,6 +9,6 @@ class Status extends Model
     //
     public function user()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo('app\Models\User');
     }
 }

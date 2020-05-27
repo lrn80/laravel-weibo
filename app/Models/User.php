@@ -5,7 +5,6 @@ namespace App\Models;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use function foo\func;
 
 class User extends Authenticatable
 {
@@ -40,7 +39,7 @@ class User extends Authenticatable
 
     public function statuses()
     {
-        $this->hasMany(Status::class);
+        $this->hasMany('app\Models\Status');
     }
 
     public function gravatar($size = '100')
