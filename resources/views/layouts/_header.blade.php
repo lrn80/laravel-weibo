@@ -10,38 +10,38 @@
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button">
                         {{ Auth::user()->name }}
                     </a>
-{{--                    <a class="nav-link" href="{{ route('users.show', Auth::user()) }}">个人中心</a>--}}
-{{--                    <a class="nav-link" href="#">编辑资料</a>--}}
+                    {{--                    <a class="nav-link" href="{{ route('users.show', Auth::user()) }}">个人中心</a>--}}
+                    {{--                    <a class="nav-link" href="#">编辑资料</a>--}}
                     <a class="dropdown-item" href="{{ route('users.show', Auth::user()) }}">个人中心</a>
-                    <a class="dropdown-item" href="#">编辑资料</a>
+                    <a class="dropdown-item" href="{{ route('users.edit', Auth::user()) }}">编辑资料</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" id="logout" href="#">
                         <form action="{{ route('logout') }}" method="POST">
                             {{ csrf_field() }}
                             {{ method_field('DELETE') }}
-                            <button class="btn btn-block btn-danger" type="submit" name="button" >退出</button>
+                            <button class="btn btn-block btn-danger" type="submit" name="button">退出</button>
                         </form>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{ route('users.show', Auth::user()) }}">个人中心</a>
-                        <a class="dropdown-item" href="#">编辑资料</a>
+                        <a class="dropdown-item" href="{{ route('users.edit', Auth::user()) }}">编辑资料</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" id="logout" href="#">
-                                <form action="{{ route('logout') }}" method="POST">
-                                    {{ csrf_field() }}
-                                    {{ method_field('DELETE') }}
-                                    <button class="btn btn-block btn-danger" type="submit" name="button" >退出</button>
-                                </form>
-                            </a>
+                            <form action="{{ route('logout') }}" method="POST">
+                                {{ csrf_field() }}
+                                {{ method_field('DELETE') }}
+                                <button class="btn btn-block btn-danger" type="submit" name="button">退出</button>
+                            </form>
+                        </a>
                     </div>
                 </li>
             @else
                 <li class="nav-item">
-                <a class="nav-link" href="{{ route('help') }}">帮助</a>
-            </li>
-            <li class="nav-item" >
-                <a class="nav-link" href="#">登录</a>
-            </li>
+                    <a class="nav-link" href="{{ route('help') }}">帮助</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">登录</a>
+                </li>
             @endif
         </ul>
     </div>
