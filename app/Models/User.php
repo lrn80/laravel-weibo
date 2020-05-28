@@ -39,7 +39,7 @@ class User extends Authenticatable
 
     public function statuses()
     {
-        $this->hasMany('app\Models\Status');
+        return $this->hasMany(Status::class);
     }
 
     public function gravatar($size = '100')
