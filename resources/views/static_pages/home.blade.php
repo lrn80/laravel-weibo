@@ -9,7 +9,7 @@
                 </section>
                 <h4>微博列表</h4>
                 <hr>
-{{--                @include('shared._feed')--}}
+                @include('shared._feed')
             </div>
             <aside class="col-md-4">
                 <section class="user_info">
