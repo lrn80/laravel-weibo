@@ -1,5 +1,4 @@
 @extends('layouts.default')
-
 @section('content')
     @if (Auth::check())
         <div class="row">
